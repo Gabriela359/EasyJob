@@ -49,11 +49,23 @@
                   class="input input-password"
                 />
 
-                <input
-                  type="submit"
-                  value="Registrar"
+                <h1 style="font-size: 16px">Selecciona tu Tipo de Usuario</h1>
+                <label>
+                  <input type="radio" name="tipo" value="reclutador" />
+                  Reclutador (Empresa)
+                </label>
+                <br />
+                <label>
+                  <input type="radio" name="tipo" value="persona" />
+                  Persona
+                </label>
+                <br />
+                <button
                   class="primary-button login-button"
-                />
+                  onclick="redirigir()"
+                >
+                  Registrar
+                </button>
               </div>
             </form>
           </div>
@@ -66,5 +78,6 @@
         </p>
       </div>
     </section>
+    <script src="../scripts/script_registr.js"></script>
   </body>
 </html>

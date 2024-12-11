@@ -1,22 +1,19 @@
-/* Reset de estilo */
 
-
-/* Estilos para el cuerpo */
 body {
     margin: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
 /* Estilos del header */
-.header { 
+header { 
     grid-area: header;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
+    background-color: #F4F5F7;
+    text-align: center;
+    font-weight: bold;
 }
 
 .title-navBar{
@@ -24,6 +21,8 @@ body {
     color: #B7A0EF;
     font-size: 18px;
     font-weight: bold;
+    text-align: left;
+    padding-left: 40px;
 }
 .menu-NavBar{
     list-style: none;
@@ -36,6 +35,7 @@ body {
 .titulo {
     font-size: 2rem;
 }
+
 
 .navbar ul {
     list-style-type: none;
@@ -56,7 +56,46 @@ body {
     text-decoration: underline;
 }
 
+.title-navBar{
+    font-family: "Noto Sans Hebrew", sans-serif;
+    color: #B7A0EF;
+    font-size: 18px;
+    font-weight: bold;
+}
 
+.menu-NavBar{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 30px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.navBar-right .menu-NavBar li a {
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navBar-right .menu-NavBar li:first-child a {
+    color: black;
+}
+
+.navBar-right .menu-NavBar li:first-child a:hover {
+    color: #B7A0EF; 
+}
+  
+.navBar-right .menu-NavBar li:last-child a {
+    background-color: #B7A0EF; 
+    color: white;
+    padding: 10px 20px;
+}
+
+.navBar-right .menu-NavBar li:last-child a:hover {
+    background-color: #425E8C; 
+    color: white;
+}
 main {
     padding: 20px;
 }
