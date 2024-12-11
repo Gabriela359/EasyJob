@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
-    <link href="/estilos/styles_login.css" rel="stylesheet" />
+    <title>registrase</title>
+    <link href="/estilos/styles_regist.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="main">
-        <div class="titulo1">Iniciar Sesión</div>
+        <div class="titulo1">Registrarse</div>
         <div class="login">
           <div class="form-container">
             <form action="/" class="form">
@@ -41,15 +41,21 @@
                   class="input input-password"
                 />
 
+                <label for="password" class="label">Confirmar Contraseña</label>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="************"
+                  class="input input-password"
+                />
+
                 <input
                   type="submit"
-                  value="Ingresar"
+                  value="Registrar"
                   class="primary-button login-button"
                 />
-                <a href="/">Olvide mi Contraseña</a>
               </div>
             </form>
-            <button class="secondary-button signup-button">Registrarse</button>
           </div>
         </div>
       </div>
