@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+    <link rel="stylesheet" href="formstyles.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Mi Hoja de Vida</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre mí</a></li>
+                <li><a href="#">Experiencia</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <form action="#" method="post" class="formulario-hoja-vida" enctype="multipart/form-data">
+            <section class="foto-perfil">
+                <h2>Foto de Perfil</h2>
+                <label for="foto">Sube tu foto de perfil:</label>
+                <input type="file" id="foto" name="foto" accept="image/*">
+            </section>
+
+            <section>
+                <h2>Información Personal</h2>
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion">
+
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+            </section>
+
+            <section>
+                <h2>Educación</h2>
+                <label for="titulo">Título o Grado:</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="institucion">Institución Educativa:</label>
+                <input type="text" id="institucion" name="institucion" required>
+
+                <label for="fecha-inicio">Fecha de Inicio:</label>
+                <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+
+                <label for="fecha-fin">Fecha de Finalización:</label>
+                <input type="date" id="fecha-fin" name="fecha-fin" required>
+            </section>
+
+            <section>
+                <h2>Experiencia Laboral</h2>
+                <label for="puesto">Puesto o Cargo:</label>
+                <input type="text" id="puesto" name="puesto" required>
+
+                <label for="empresa">Empresa o Institución:</label>
+                <input type="text" id="empresa" name="empresa" required>
+
+                <label for="descripcion">Responsabilidades y Logros:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </section>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
