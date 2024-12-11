@@ -20,6 +20,8 @@ body{
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .title-navBar{
@@ -33,13 +35,34 @@ body{
     list-style: none;
     display: flex;
     padding: 0;
+    gap: 30px;
+    font-family: "Noto Sans", sans-serif;
 }
 
 .navBar-right .menu-NavBar li a {
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
+    font-weight: bold;
+}
+
+.navBar-right .menu-NavBar li:first-child a {
+    color: black;
+}
+
+.navBar-right .menu-NavBar li:first-child a:hover {
+    color: #B7A0EF; 
+}
+  
+.navBar-right .menu-NavBar li:last-child a {
+    background-color: #B7A0EF; 
+    color: white;
+    padding: 10px 20px;
+}
+
+.navBar-right .menu-NavBar li:last-child a:hover {
+    background-color: #425E8C; 
+    color: white;
 }
 
 
