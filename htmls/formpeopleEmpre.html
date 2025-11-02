@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoja de Vida</title>
+    <link rel="stylesheet" href="/estilos/formstyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="title-navBar">
+        <h3>EasyJob</h3>
+      </div>
+      <h1 class="titulo">Crear un Empleo</h1>
+    </header>
+
+    <main>
+      <form
+        action="#"
+        method="post"
+        class="formulario-hoja-vida"
+        enctype="multipart/form-data"
+      >
+        
+        <section>
+          <h2>Empresa</h2>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombreEmpresa" name="nombreEmpresa" required />
+
+          <label for="Opciones">Categoria:</label>
+          <select id="opciones" name="opciones">
+            <option value="opcion1">Administración</option>
+            <option value="opcion2">Agricultura</option>
+            <option value="opcion3">Arte y Diseño</option>
+            <option value="opcion4">Atención al Cliente</option>
+            <option value="opcion5">Biotecnología</option>
+            <option value="opcion6">Construcción</option>
+            <option value="opcion7">Consultoría</option>
+            <option value="opcion8">Contabilidad y Finanzas</option>
+          </select>
+
+          <label for="telefono">Ubicacion del Trabajo</label>
+          <input type="text" id="Ubicacion" name="Ubicacion" required />
+
+          <label for="Experiencia">Experiencia</label>
+          <input type="text" id="Experiencia" name="Experiencia" />
+
+          <label for="fecha-nacimiento"
+            >Fecha Limite de Solucitud de Empleo:</label
+          >
+          <input type="date" id="fecha-Limite" name="fecha-Limite" />
+        </section>
+
+        <section>
+          <h2>Describcion de Trabajo</h2>
+          <label for="titulo">Título o Grado:</label>
+          <input type="text" id="titulo" name="titulo" required />
+
+          <label for="Web">Sitio Web de la Empresa:</label>
+          <input type="text" id="Web" name="Web" required placeholder="https//:Empresa.com"/>
+
+          <label for="Titulacion">Titulacion:</label>
+          <select id="Titulacion" name="Titulacion">
+            <option value="opcion1">Abogado</option>
+            <option value="opcion2">Administrador</option>
+            <option value="opcion3">Asistente Administrativo</option>
+            <option value="opcion4">Carpintero</option>
+            <option value="opcion5">Científico</option>
+            <option value="opcion6">Contador</option>
+            <option value="opcion7">Constructor</option>
+            <option value="opcion8">Camarero</option>
+          </select>
+
+          <label for="Salario">Rango Salarial:</label>
+          <input type="text" id="Salario" name="Salario" required />
+
+
+          <label for="Vacantes">Numeros de vacantes:</label>
+          <input type="text" id="Vacantes" name="Vacantes" required />
+
+          <a href="/htmls/Gestion.html">
+          Registrar
+        </a>
+      </form>
+    </main>
+    <script src="/scripts/script.js"></script>
+  </body>
+</html>

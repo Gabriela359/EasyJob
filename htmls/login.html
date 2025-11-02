@@ -14,14 +14,19 @@
   </head>
   <body>
     <section class="layout">
+      <!-- Header -->
       <div class="header">
         <div class="title-navBar">
           <h3>EasyJob</h3>
         </div>
       </div>
+
+      <!-- Contenido principal -->
       <div class="main">
-        <div class="titulo1">Iniciar Sesión</div>
         <div class="login">
+          <!-- 🔹 Muevo el título DENTRO del contenedor .login -->
+          <div class="titulo1">Iniciar Sesión</div>
+
           <div class="form-container">
             <form action="/" class="form">
               <div>
@@ -41,20 +46,28 @@
                   class="input input-password"
                 />
 
-                <input
-                  type="submit"
-                  value="Ingresar"
-                  class="primary-button login-button"
-                />
+                <div class="centrar">
+                  <a href="/htmls/formpeopleEmpre.html">
+                    <div class="btn">
+                      <p>Ingresar</p>
+                    </div>
+                  </a>
+                </div>
+
                 <a href="/">Olvide mi Contraseña</a>
               </div>
             </form>
+
             <a href="/htmls/registrar.html">
-              <button class="secondary-button signup-button">Registrarse</button>
+              <button class="secondary-button signup-button">
+                Registrarse
+              </button>
             </a>
           </div>
         </div>
       </div>
+
+      <!-- Footer -->
       <div class="footer">
         <p>
           &copy; 2024 EasyJob. Designed by Jaider Lopez, Gabriela Espinosa,
@@ -62,6 +75,7 @@
         </p>
       </div>
     </section>
+
     <script src="../scripts/script_registr.js"></script>
   </body>
 </html>

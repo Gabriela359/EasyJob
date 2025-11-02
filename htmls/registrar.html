@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>registrase</title>
+    <title>Registrarse</title>
     <link href="/estilos/styles_regist.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,14 +14,19 @@
   </head>
   <body>
     <section class="layout">
+      <!-- Header -->
       <div class="header">
         <div class="title-navBar">
           <h3>EasyJob</h3>
         </div>
       </div>
+
+      <!-- Contenido principal -->
       <div class="main">
-        <div class="titulo1">Registrarse</div>
         <div class="login">
+          <!-- 🔹 Muevo el título dentro de .login -->
+          <div class="titulo1">Registrarse</div>
+
           <div class="form-container">
             <form action="/" class="form">
               <div>
@@ -41,10 +46,12 @@
                   class="input input-password"
                 />
 
-                <label for="password" class="label">Confirmar Contraseña</label>
+                <label for="confirm-password" class="label"
+                  >Confirmar Contraseña</label
+                >
                 <input
                   type="password"
-                  id="password"
+                  id="confirm-password"
                   placeholder="************"
                   class="input input-password"
                 />
@@ -60,17 +67,21 @@
                   Persona
                 </label>
                 <br />
-                <a href="/htmls/formpeople.html">
-                  <button
-                  class="primary-button login-button">
-                  Registrar
-                </button>
-                </a>
+
+                <div class="centrar">
+                  <a href="/htmls/correo.html">
+                    <div class="btn">
+                      <p>Registrar</p>
+                    </div>
+                  </a>
+                </div>
               </div>
             </form>
           </div>
         </div>
       </div>
+
+      <!-- Footer -->
       <div class="footer">
         <p>
           &copy; 2024 EasyJob. Designed by Jaider Lopez, Gabriela Espinosa,
@@ -78,6 +89,7 @@
         </p>
       </div>
     </section>
-    <script src="../Scripts/script_registr.js"></script>
+
+    <script src="../scripts/script_registr.js"></script>
   </body>
 </html>

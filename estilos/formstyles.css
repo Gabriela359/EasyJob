@@ -1,189 +1,458 @@
-
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  min-height: 100vh;
 }
 
-/* Estilos del header */
-header { 
-    grid-area: header;
-    margin: 0 auto;
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: #F4F5F7;
-    text-align: center;
-    font-weight: bold;
+/* Header mejorado con mejor jerarquía visual */
+header {
+  grid-area: header;
+  margin: 0 auto;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fb 100%);
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
 }
 
-.title-navBar{
-    font-family: "Noto Sans Hebrew", sans-serif;
-    color: #B7A0EF;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
-    padding-left: 40px;
+.title-navBar {
+  font-family: "Noto Sans Hebrew", sans-serif;
+  color: #b7a0ef;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 40px;
+  text-shadow: 2px 2px 8px rgba(183, 160, 239, 0.2);
+  letter-spacing: 0.5px;
 }
-.menu-NavBar{
-    list-style: none;
-    display: flex;
-    padding: 0;
-    gap: 30px;
-    font-family: "Noto Sans", sans-serif;
+
+.menu-NavBar {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 30px;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .titulo {
-    font-size: 2rem;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #425e8c 0%, #b7a0ef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 10px 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
-
 .navbar ul {
-    list-style-type: none;
-    display: flex;
+  list-style-type: none;
+  display: flex;
 }
 
 .navbar ul li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .navbar ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #b7a0ef;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
 }
 
 .navbar ul li a:hover {
-    text-decoration: underline;
+  transform: translateY(-2px);
 }
 
-.title-navBar{
-    font-family: "Noto Sans Hebrew", sans-serif;
-    color: #B7A0EF;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.menu-NavBar{
-    list-style: none;
-    display: flex;
-    padding: 0;
-    gap: 30px;
-    font-family: "Noto Sans", sans-serif;
-}
-
+/* Enlaces del navbar mejorados */
 .navBar-right .menu-NavBar li a {
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
 }
 
 .navBar-right .menu-NavBar li:first-child a {
-    color: black;
+  color: #333;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.navBar-right .menu-NavBar li:first-child a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: rgba(183, 160, 239, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navBar-right .menu-NavBar li:first-child a:hover::before {
+  opacity: 1;
 }
 
 .navBar-right .menu-NavBar li:first-child a:hover {
-    color: #B7A0EF; 
+  color: #b7a0ef;
 }
-  
+
 .navBar-right .menu-NavBar li:last-child a {
-    background-color: #B7A0EF; 
-    color: white;
-    padding: 10px 20px;
+  background: linear-gradient(135deg, #b7a0ef 0%, #9d84d9 100%);
+  color: white;
+  padding: 12px 28px;
+  box-shadow: 0 4px 15px rgba(183, 160, 239, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.navBar-right .menu-NavBar li:last-child a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.navBar-right .menu-NavBar li:last-child a:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .navBar-right .menu-NavBar li:last-child a:hover {
-    background-color: #425E8C; 
-    color: white;
-}
-main {
-    padding: 20px;
+  background: linear-gradient(135deg, #425e8c 0%, #5a7ab8 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(66, 94, 140, 0.5);
 }
 
+main {
+  padding: 40px 20px;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Formulario mejorado con diseño moderno */
 .formulario-hoja-vida {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: rgb(255, 255, 255);
-    padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #ffffff 0%, #fafbfc 100%);
+  padding: 50px;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(183, 160, 239, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.formulario-hoja-vida::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #b7a0ef 0%, #425e8c 50%, #b7a0ef 100%);
 }
 
 section {
-    margin-bottom: 20px;
+  margin-bottom: 35px;
+  padding: 25px;
+  background: white;
+  border-radius: 16px;
+  border-left: 4px solid #b7a0ef;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 25px rgba(183, 160, 239, 0.15);
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #B7A0EF;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #b7a0ef 0%, #425e8c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
-    color: #555;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
 }
 
+/* Inputs mejorados con mejor UX */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="date"],
 textarea,
 input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #fafbfc;
+  box-sizing: border-box;
 }
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #b7a0ef;
+  background-color: white;
+  box-shadow: 0 0 0 4px rgba(183, 160, 239, 0.15), 0 4px 12px rgba(183, 160, 239, 0.1);
+  transform: translateY(-2px);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* Select mejorado */
+select {
+  width: 40%;
+  margin: 10px 0px;
+  padding: 14px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafbfc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23b7a0ef' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 40px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #b7a0ef;
+  box-shadow: 0 0 0 4px rgba(183, 160, 239, 0.15);
+  background-color: white;
+}
+
+select:hover {
+  border-color: #b7a0ef;
+}
+
+/* Componente de subida de archivos mejorado */
 .file-upload {
-    position: relative;
-    display: inline-block;
-    width: 200px;
-    height: 50px;
-    border: 2px solid #007bff;
-    border-radius: 8px;
-    background-color: #f0f8ff;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #007bff;
-    cursor: pointer;
-    padding: 10px;
-  }
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  height: 80px;
+  border: 3px dashed #b7a0ef;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f0f8ff 0%, #e8f0ff 100%);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #425e8c;
+  cursor: pointer;
+  padding: 15px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
 
-    /* Ocultamos el input de tipo file */
-    .file-upload input[type="file"] {
-      display: none;
-    }
+.file-upload input[type="file"] {
+  display: none;
+}
 
-    /* Estilo para el texto dentro del contenedor */
-    .file-upload span {
-      display: block;
-      line-height: 30px;
-    }
+.file-upload span {
+  display: block;
+  line-height: 50px;
+  font-weight: 600;
+}
 
-    /* Efecto al pasar el mouse por encima */
-    .file-upload:hover {
-      background-color: #007bff;
-      color: white;
-      border-color: #0056b3;
-    }
+.file-upload:hover {
+  background: linear-gradient(135deg, #b7a0ef 0%, #9d84d9 100%);
+  color: white;
+  border-color: #9d84d9;
+  border-style: solid;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(183, 160, 239, 0.4);
+}
+
+/* Botón principal mejorado */
 button {
-    background-color: #B7A0EF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    
+  background: linear-gradient(135deg, #b7a0ef 0%, #9d84d9 100%);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(183, 160, 239, 0.4);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+button:hover::before {
+  width: 400px;
+  height: 400px;
 }
 
 button:hover {
-    background-color: #555;
+  background: linear-gradient(135deg, #425e8c 0%, #5a7ab8 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(66, 94, 140, 0.5);
 }
 
+button:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(66, 94, 140, 0.4);
+}
 
+/* Responsividad mejorada */
+@media (max-width: 768px) {
+  .title-navBar {
+    font-size: 20px;
+    padding-left: 20px;
+  }
+
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  header {
+    padding: 15px 20px;
+  }
+
+  .formulario-hoja-vida {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  section {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .menu-NavBar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.5rem;
+  }
+
+  .formulario-hoja-vida {
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  textarea {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+}
