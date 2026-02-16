@@ -1,1 +1,2 @@
 # EasyJob
+PARA VISUALIZAR LA PAGINA WEB, INGRESA POR EL SIGUIENTE ENLACE: https://gabriela359.github.io/EasyJob/
